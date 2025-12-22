@@ -20,8 +20,8 @@ This repository contains human-tested, one-tool automation recipes designed for 
 ### 📦 The Recipe Library
 | # | Recipe Name | Saves | Version | Link |
 | :--- | :--- | :--- | :--- | :--- |
-| **00** | **n8n Master Setup** | 15m setup | Guide | [View Recipe](recipes/00-setup/) |
-| **01** | **Email Invoices → Sheets** | 2h/week | Standard + AI | [View JSON](recipes/01-invoices-to-sheets/standard.json) |
+| **00** | **n8n Master Setup** | 15m setup | Guide | [View Recipe](recipes/000-n8n-setup/) |
+| **01** | **Email Invoices → Sheets** | 2h/week | Standard + AI | [View JSON](recipes/001-gmail-attachments/standard.json) |
 | **02** | **Stripe → Slack** | 1h/week | Standard | [Coming Soon] |
 | **03** | **Gmail Leads → CRM** | 2h/week | Standard + AI | [Coming Soon] |
 
