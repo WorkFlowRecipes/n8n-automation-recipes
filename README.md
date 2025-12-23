@@ -1,6 +1,6 @@
-# 🛠️ Workflow Recipes: n8n Automations That Actually Work
+# 🛠️ Workflow Recipes: Learning n8n Automation One Recipe at a Time
 
-**One copy-paste recipe every Monday. Tested on real businesses. 15-minute setup.**
+**One workflow every Monday. Built from scratch. Tested thoroughly. Shared honestly.**
 
 [![Newsletter](https://img.shields.io/badge/Subscribe-Weekly_Recipes-blue?style=for-the-badge)](https://workflowrecipes.co) 
 [![n8n](https://img.shields.io/badge/Built_with-n8n-orange?style=for-the-badge&logo=n8n)](https://n8n.io)
@@ -10,117 +10,122 @@
 
 ## 📖 What is This?
 
-Small business owners and solopreneurs waste **5-15 hours per week** on repetitive admin tasks:
-- Manually downloading invoice PDFs and filing them
-- Copy-pasting customer emails into spreadsheets
-- Sending the same follow-up emails over and over
-- Tracking payments and chasing late invoices
+I'm learning n8n automation by building one workflow every week and documenting everything I discover.
 
-This repository contains **human-tested n8n workflows** that automate these tasks. Each recipe:
+Every Monday, I share:
+- ✅ **A working workflow** (tested until it actually works)
+- ✅ **What broke during the build** (error messages, wrong assumptions, dead ends)
+- ✅ **How I fixed it** (what I Googled, what worked, what didn't)
+- ✅ **What I learned** (concepts that clicked, "aha!" moments, resources that helped)
 
-✅ **Runs in one tool** (n8n - free and self-hostable)  
-✅ **Takes 10-15 minutes to set up** (import JSON, tweak credentials, activate)  
-✅ **Includes troubleshooting** (real problems I hit and how I solved them)  
-✅ **Shows actual time saved** (tested on my own business for 5-7 days)  
+This is **learning in public**. No fake expertise. No polished tutorials that skip the messy parts. Just honest documentation of one person's journey from n8n beginner to (eventually) competent.
 
-**No coding required. No tool-hopping. Just working automations.**
+**If you're also learning automation, follow along. We'll figure this out together.**
 
 ---
 
 ## 🗂️ Available Recipes
 
-> **Note:** I build and test one new recipe each week. Only proven workflows are published here.
+> **Note:** I build and test one new recipe each week. Only workflows that actually work are published here.
 
 ### 🟢 Recipe #0: n8n Setup Guide
-**Get n8n running in 10 minutes** (self-hosted or cloud)  
+**What I learned:** Getting n8n running (cloud vs self-hosted)  
 📁 [View Guide](recipes/000-n8n-setup/)
 
 ---
 
 ### 🟢 Recipe #1: Email Attachments → Auto-Filed in Google Drive
-**Problem:** Manually downloading 20-50 invoices/receipts per month and organizing folders  
-**Solution:** Automatically scan Gmail, extract attachments, file in Drive by client/date  
-**Time Saved:** 3-4 hours/month  
-**Setup:** 15 minutes
+**The challenge:** Automatically file email attachments into Google Drive folders  
+**What I built:** Gmail trigger → Extract attachments → Upload to Drive with smart naming  
+**What broke:** Gmail trigger didn't work (forgot to enable IMAP), special characters in filenames broke uploads  
+**What I learned:** How OAuth works, regex for filename sanitization, the difference between polling and webhook triggers  
+**Testing:** Ran for 5 days, processed 15 test emails, hit 2 errors, fixed both  
 
 📁 [View Recipe](recipes/001-email-attachments-to-drive/) | 📥 [Download JSON](recipes/001-email-attachments-to-drive/workflow.json)
 
 **Includes:**
-- Standard version (max reliability)
-- AI-enhanced version (smarter file naming)
-- Troubleshooting guide
-- Screenshots
+- Working workflow (import and run)
+- Step-by-step setup with screenshots
+- Every error I encountered + solutions
+- What I'd do differently next time
 
 ---
 
-### 🔵 Recipe #2: Customer Emails → Google Sheets Tracking
-**Status:** Currently testing (launches Week 2)
+### 🔄 Recipe #2: Customer Emails → Google Sheets Tracking
+**Status:** Building this week (testing Dec 30-Jan 5)
 
 ---
 
-### 🔵 Recipe #3: Form Responses → Email + Sheets
-**Status:** Building next week
+### 📝 Recipe #3: Form Responses → Email + Sheets
+**Status:** Starting next week
 
 ---
 
-## 🚀 Quick Start
+## 🚀 How to Use These Workflows
 
 ### Prerequisites
-- An n8n instance ([self-host guide](recipes/000-n8n-setup/) or use [n8n cloud](https://n8n.io) - $20/month)
+- An n8n instance ([setup guide](recipes/000-n8n-setup/) or use [n8n cloud](https://n8n.io))
 - Gmail account (for most recipes)
 - Google Drive/Sheets access
+- Patience for troubleshooting (it won't work perfectly first try)
 
-### How to Use a Recipe
+### Import and Test
 
-1. **Browse the recipes above** and pick one that solves your problem
-2. **Read the recipe README** in its folder (has setup instructions + screenshots)
-3. **Download the JSON file** from the recipe folder
+1. **Pick a recipe** from the list above
+2. **Read the README** in the recipe folder (has my full notes)
+3. **Download the JSON** workflow file
 4. **Import to n8n:**
-   - Open n8n
-   - Click **Workflows** → **Import from File**
-   - Select the downloaded JSON
+   - Workflows → Import from File → Select JSON
 5. **Configure credentials:**
-   - Click on each node with a warning icon
-   - Add your Gmail/Drive/Sheets credentials
-   - Follow the recipe's setup guide for any specific settings
-6. **Test it:**
-   - Click **Execute Workflow** to test
-   - Check the recipe README for common errors
-7. **Activate:**
-   - Toggle the workflow to **Active**
-   - Let it run and monitor for 1-2 days
+   - Click nodes with warning icons
+   - Add your Gmail/Drive credentials
+   - Follow setup guide for specifics
+6. **Test first:**
+   - Click "Execute Workflow" button
+   - Check execution log for errors
+   - If it breaks, check the README troubleshooting section
+7. **Activate when working:**
+   - Toggle to Active
+   - Monitor for a day or two
 
 ---
 
-## 📬 Get New Recipes Every Monday
+## 📬 Follow My Learning Journey
 
-I publish one new recipe each week (Mondays, 8am AEST).
+I publish one new recipe every Monday (8am AEST).
 
-Each recipe includes:
-- The problem it solves (with real time-saved data)
-- Standard version (no AI, max reliability)
-- AI-enhanced version (when it adds value)
-- Step-by-step setup guide
-- Troubleshooting from real errors I hit
-- Screenshots and examples
+Each week you get:
+- The workflow I built (with full code)
+- What I was trying to solve
+- What broke and how I debugged it
+- What I learned this week
+- Resources that helped me
+
+**No fluff. No "expert" posturing. Just honest learning documentation.**
 
 **👉 [Subscribe at workflowrecipes.co](https://workflowrecipes.co)**
 
 ---
 
-## 🤔 Why These Recipes?
+## 🤔 Why Follow This?
 
-**vs. n8n's official templates:**
-- ✅ Tested on real business data (not theoretical examples)
-- ✅ Includes "gotchas" I discovered (things that break and how to fix them)
-- ✅ Focused on small business pain points (not enterprise use cases)
-- ✅ Plain-English instructions (zero experience assumed)
-- ✅ Time-saved metrics from actual usage
+**vs. Expert tutorials:**
+- ✅ Beginner teaching beginners (more relatable)
+- ✅ I show the mistakes, not just the solution
+- ✅ Plain English, not jargon
+- ✅ "Here's what I Googled" transparency
 
-**vs. Building from scratch:**
-- ✅ Already debugged and working
-- ✅ 15-min import vs. 2-4 hour build
-- ✅ Proven to handle real-world edge cases
+**vs. Official docs:**
+- ✅ Practical projects, not feature lists
+- ✅ Complete workflows you can copy
+- ✅ Troubleshooting from real errors
+- ✅ Learning progression (simple → complex)
+
+**vs. Figuring it out alone:**
+- ✅ Structured weekly path
+- ✅ Someone who just learned it (not an expert from 5 years ago)
+- ✅ Community of other learners
+- ✅ Tested workflows that actually work
 
 ---
 
@@ -129,67 +134,88 @@ Each recipe includes:
 Each recipe folder contains:
 ```
 recipes/001-email-attachments-to-drive/
-├── README.md              # Setup guide, troubleshooting, screenshots
-├── workflow.json          # Standard version (import this first)
-├── workflow-ai.json       # AI-enhanced version (optional)
-├── screenshots/           # Visual guide
-│   ├── setup-step-1.png
-│   ├── setup-step-2.png
+├── README.md              # Setup guide, what I learned, troubleshooting
+├── workflow.json          # The working workflow (import this)
+├── screenshots/           # Visual guide to setup
+│   ├── gmail-trigger.png
+│   ├── drive-upload.png
 │   └── final-result.png
-└── LEARNINGS.md           # What I discovered building this
+└── LEARNINGS.md           # My personal notes (mistakes, aha moments)
 ```
 
 ---
 
-## 💡 Philosophy
+## 💡 My Learning Philosophy
 
-**"I run this myself"**
+**"Build it until it works, then share everything"**
 
-Every recipe in this repo:
-1. Runs in my own business (not theoretical)
-2. Has been tested for at least 5-7 days
-3. Includes real problems I encountered
-4. Shows actual time saved (not estimates)
+Every recipe here:
+1. Was built from scratch (not copied from tutorials)
+2. Broke at least once during development
+3. Was tested thoroughly (5-7 days minimum)
+4. Includes the real problems I encountered
+5. Is something I'd actually use
 
-I'm learning n8n in public and sharing working recipes as I build them.
+I'm not an expert. I'm just documenting what I learn as I build one workflow per week.
 
----
-
-## 🗺️ Roadmap
-
-**Current focus (Recipes 1-10):**
-- ✅ Email attachments → Google Drive
-- 🔄 Customer emails → Sheets tracking (testing now)
-- 📝 Form responses → Email + Sheets
-- 📝 Unpaid invoices → Payment reminders
-- 📝 Weekly business report generation
-- 📝 New client intake automation
-- 📝 Expense tracking from email
-- 📝 Appointment confirmation automation
-- 📝 Testimonials → Google Docs
-- 📝 Lead magnet delivery automation
-
-**Future (Recipes 11-20):**
-- Calendar management
-- Social media workflows  
-- Advanced AI integrations
-- Multi-step business processes
+**Learning in public is messy. That's the point.**
 
 ---
 
-## 🤝 Contributing
+## 🗺️ My Learning Roadmap
 
-Found a bug in a recipe? Have a suggestion?
+**Current focus (Recipes 1-10 - Beginner):**
+- ✅ Email attachments → Google Drive (simple triggers)
+- 🔄 Customer emails → Sheets (data extraction)
+- 📝 Form responses → Email + Sheets (multi-step flows)
+- 📝 Invoice reminders (scheduled workflows)
+- 📝 Weekly reports (data aggregation)
+- 📝 Client intake (complex multi-step)
+- 📝 Expense tracking (email parsing)
+- 📝 Appointment automation (calendar integration)
+- 📝 Testimonial collection (web hooks)
+- 📝 Lead magnet delivery (conditional logic)
 
-1. **Issues:** Open an issue describing the problem
-2. **Improvements:** Fork, fix, and submit a PR
-3. **Requests:** What workflow should I build next? [Open a discussion](../../discussions)
+**Next phase (Recipes 11-20 - Intermediate):**
+- API integrations
+- Error handling patterns
+- Performance optimization
+- Advanced data transformation
+
+**Eventually (Recipes 21+ - Advanced):**
+- AI integrations
+- Complex multi-workflow systems
+- Custom code nodes
+- Production-grade error recovery
+
+---
+
+## 🤝 Learning Together
+
+**Found an error in my workflow?** Please tell me! Open an issue.
+
+**Have a suggestion?** Fork, improve, and submit a PR.
+
+**Want to request a workflow?** [Open a discussion](../../discussions) - if I don't know how to build it yet, we can learn together.
+
+**Built something cool?** Share it! This is a learning community.
+
+---
+
+## 📊 My Progress
+
+**Week 0 (Dec 23-29):** Building Recipe #1  
+**Week 1 (Dec 30-Jan 5):** Documenting Recipe #1, setting up infrastructure  
+**Week 2 (Jan 6):** Publishing Recipe #1, starting Recipe #2  
+
+**Goal:** 52 workflows in Year 1  
+**Current:** 1 completed, 51 to go  
 
 ---
 
 ## 📄 License
 
-MIT License - Use these recipes however you want.
+MIT License - Use these workflows however you want. Learn from them, improve them, share them.
 
 ---
 
@@ -197,8 +223,8 @@ MIT License - Use these recipes however you want.
 
 - 📧 **Newsletter:** [workflowrecipes.co](https://workflowrecipes.co)
 - 🐦 **Twitter/X:** [@workflowrecipes](https://twitter.com/workflowrecipes) *(coming soon)*
-- 💼 **LinkedIn:** [Your LinkedIn] *(coming soon)*
+- 💬 **Discussions:** [GitHub Discussions](../../discussions)
 
 ---
 
-**Built with ☕ by a solopreneur who got tired of manual admin.**
+**Learning n8n one workflow at a time. Join me on the journey.**
